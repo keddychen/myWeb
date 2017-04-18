@@ -5,7 +5,7 @@ require.config({
         'appConfig':'js/app-config',
         'routes': 'js/routes',
         'ionic': 'lib/ionic/js/ionic.bundle.min',
-        'ngcordova': 'lib/ngCordova/dist/ng-cordova',
+        'ngcordova': 'lib/ngCordova/dist/ng-cordova.min',
         'bootstrap':'js/bootstrap',
         'zepto':'lib/zepto/zepto.min',
         'asyncLoader': 'lib/async-loader/angular-async-loader'
