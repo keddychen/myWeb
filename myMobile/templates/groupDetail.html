@@ -1,0 +1,71 @@
+<ion-header-bar align-title="center" class="bar-stable">
+  <div class="buttons">
+    <button class="button button-icon ion-ios-arrow-left" ng-click="backIndex()">
+    </button>
+  </div>
+  <div class="h1 title login-title" >我的生活</div>
+</ion-header-bar>
+<ion-view cache-view="false">
+  <ion-content has-bouncing="true" overflow-scroll="false">
+    <div class="list card">
+      <div class="item item-avatar">
+        <img src="img/pic2.jpg">
+        <h2>涂鸦小组</h2>
+        <p>
+          <a href="javascript:;" class="subdued">组员：9</a>
+          <a href="javascript:;" class="subdued">粉丝：9</a>
+        </p>
+      </div>
+      <div class="item" style="padding: 4px;">
+        <div class="row">
+          <div class="col group-cell-select" ng-class="{gact:type=='post'}" ng-click="changeType(0)">组员帖子</div>
+          <div class="col group-cell-select" ng-class="{gact:type=='act'}" ng-click="changeType(1)">组活动</div>
+        </div>
+      </div>
+      <div class="list" ng-show="type=='post'">
+        <a class="item item-thumbnail-left" href="javascript:;" ng-click="goAlert()">
+          <img src="img/perry.png">
+          <h2>我的小花盆</h2>
+          <p class="friend-detail-p">开心就好啦</p>
+        </a>
+        <a class="item item-thumbnail-left" href="javascript:;" ng-click="goAlert()">
+          <img src="img/perry.png">
+          <h2>我的小花盆</h2>
+          <p class="friend-detail-p">开心就好啦</p>
+        </a>
+      </div>
+      <div class="list" ng-show="type=='act'">
+        <a class="item item-thumbnail-left" href="#/tab/act">
+          <img src="img/pic3.jpg">
+          <h2>你好,梵高先生</h2>
+          <p class="friend-detail-p">开心就好啦</p>
+        </a>
+        <a class="item item-thumbnail-left" href="#/tab/act">
+          <img src="img/pic3.jpg">
+          <h2>你好,梵高先生</h2>
+          <p class="friend-detail-p">开心就好啦</p>
+        </a>
+        <a class="item item-thumbnail-left" href="#/tab/act">
+          <img src="img/pic3.jpg">
+          <h2>你好,梵高先生</h2>
+          <p class="friend-detail-p">开心就好啦</p>
+        </a>
+        <a class="item item-thumbnail-left" href="#/tab/act">
+          <img src="img/pic3.jpg">
+          <h2>你好,梵高先生</h2>
+          <p class="friend-detail-p">开心就好啦</p>
+        </a>
+      </div>
+    </div>
+    <div class="blank-h44"></div>
+  </ion-content>
+</ion-view>
+
+<div class="tabs">
+  <a class="tab-item">
+    马上关注
+  </a>
+  <a class="tab-item">
+    申请加入
+  </a>
+</div>

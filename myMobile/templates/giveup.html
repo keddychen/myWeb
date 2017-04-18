@@ -1,0 +1,30 @@
+<ion-header-bar align-title="center" class="bar-stable">
+    <div class="buttons">
+        <button class="button button-icon ion-ios-arrow-left" ng-click="$ionicGoBack()">
+        </button>
+    </div>
+    <div class="h1 title login-title" >不喜欢系列</div>
+</ion-header-bar>
+<ion-view cache-view="false">
+    <ion-content>
+        <div class="list">
+            <ion-item class="mine-item item" ng-click="changeType(0)">
+                <i class="icon ion-ios-checkmark-empty mine-right" ng-show="type==0"></i>
+                <p class="mine-lab-lonely">一般般啦</p>
+            </ion-item>
+            <ion-item class="mine-item item" ng-click="changeType(1)">
+                <i class="icon ion-ios-checkmark-empty mine-right" ng-show="type==1"></i>
+                <p class="mine-lab-lonely">颜色不喜欢</p>
+            </ion-item>
+            <ion-item class="mine-item item" ng-click="changeType(2)">
+                <i class="icon ion-ios-checkmark-empty mine-right" ng-show="type==2"></i>
+                <p class="mine-lab-lonely">构图不喜欢</p>
+            </ion-item>
+            <ion-item class="mine-item item" ng-click="changeType(3)">
+                <i class="icon ion-ios-checkmark-empty mine-right" ng-show="type==3"></i>
+                <p class="mine-lab-lonely">超级不喜欢</p>
+            </ion-item>
+        </div>
+    </ion-content>
+
+</ion-view>

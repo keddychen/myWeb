@@ -1,0 +1,50 @@
+<ion-header-bar align-title="center" class="bar-stable">
+  <div class="buttons">
+    <button class="button button-icon ion-ios-arrow-left" ng-click="$ionicGoBack()">
+    </button>
+  </div>
+  <div class="h1 title login-title">我的生活</div>
+  <div class="buttons">
+    <a class="button login-register" ng-click="addcomment()">
+      评论
+    </a>
+  </div>
+</ion-header-bar>
+<ion-view cache-view="false">
+  <ion-content has-bouncing="true" overflow-scroll="false">
+    <div class="list card">
+      <div class="item item-body">
+        <img class="full-image" src="img/pic5.jpg" id="img" ng-click="magnify()">
+        <h2 class="dm-nowrap-2">密室盗墓</h2>
+      </div>
+      <div class="item item-body">
+        <h2 class="dm-nowrap-2 ch-dm-nowrap">
+          打酱油页面, 凑合看看噢~
+        </h2>
+        <p>
+          昏暗的走道,两边都是紧闭的玻璃大门,透过玻璃的是里面渗出来的丝丝寒意。<br>
+          我们几个一个接着一个不敢离太远,不长的走道里,回荡着我们"哒哒哒"的脚步声,还有喘气的声音<br>
+          ……<br>
+          我们齐齐拿着手电筒对准黑黢黢的洞口,弯腰下去……<br>
+          满墙的假蛇,蛇眼都闪着幽幽的绿光,男神一秒入戏了,举起道具机关枪,对准扫射,"咩咩,快,替我打亮光线,我要消灭它们~"<br>
+          不想写啦~~~
+        </p>
+      </div>
+      <h3>&nbsp;&nbsp;评论：</h3>
+      <div>
+        <ul class="list ch-listTalk" id="listTalk">
+          <li>
+            <img src="img/pic2.jpg">
+            <span class="ch-listSp">&nbsp;咩咩:哈哈哈哈~</span>
+          </li>
+          <li id="talk">
+            <img src="img/pic2.jpg">
+            <span class="ch-listSp">momo：哈哈哈哈~</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
+
+

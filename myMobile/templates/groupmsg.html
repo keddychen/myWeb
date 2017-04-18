@@ -1,0 +1,58 @@
+<ion-header-bar align-title="center" class="bar-stable">
+    <div class="buttons">
+        <button class="button button-icon ion-ios-arrow-left" ng-click="$ionicGoBack()">
+        </button>
+    </div>
+    <div class="h1 title login-title" >我的生活</div>
+    <div class="buttons">
+        <a class="button login-register" ng-click="addcomment()">
+            评论
+        </a>
+    </div>
+</ion-header-bar>
+<ion-view cache-view="false">
+    <ion-content has-bouncing="true" overflow-scroll="false">
+        <div class="list card">
+            <div class="item item-body">
+                <img class="full-image" src="img/pic1.jpg" id="img" ng-click="magnify()">
+                <h2 class="dm-nowrap-2">暖和暖和的一天</h2>
+            </div>
+            <div class="item item-body">
+                <h2 class="dm-nowrap-2 ch-dm-nowrap">
+                  <i class="icon ion-ios-partlysunny"></i>
+                  <i class="icon ion-ios-paw-outline"></i>
+                  <i class="icon ion-ios-paw-outline"></i>
+                  <i class="icon ion-ios-paw-outline"></i>
+                  <i class="icon ion-ios-paw-outline"></i>
+                  <i class="icon ion-ios-paw-outline"></i>
+                  <i class="icon ion-ios-paw-outline"></i>
+                </h2>
+                <p>
+                  猫咪温柔地蹭着脸颊<br>
+                  又是一个被阳光唤醒的早晨<br>
+                  院子里晒满了衣物<br>
+                  空气中散发着干燥的气息<br>
+                  它跳上窗台<br>
+                  嗅了嗅正在发芽的小茉莉<br>
+                  便慵懒地躺在一旁<br>
+                  露出圆鼓鼓的肚子<br>
+                  眯着眼睛开始享受<br>
+                  暖和暖和的一天
+                </p>
+            </div>
+            <h3>&nbsp;&nbsp;评论：</h3>
+            <div>
+                <ul class="list ch-listTalk" id="listTalk">
+                    <li>
+                        <img src="img/pic2.jpg">
+                        <span class="ch-listSp">&nbsp;啦啦：下次我们一起~</span>
+                    </li>
+                    <li id="talk">
+                        <img src="img/pic2.jpg">
+                        <span class="ch-listSp">momo：下次我们一起~</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

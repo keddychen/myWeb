@@ -1,0 +1,317 @@
+<ion-header-bar align-title="center" class="bar-stable">
+    <div class="ch-headerBox">
+        <!--<a class="subdued ch-subdued" href="#/tab/location" >-->
+            <!--<span class="ch-city">上海市<i class="icon ion-chevron-down"></i></span>-->
+        <!--</a>-->
+        <a class="subdued ch-subdued" href="#/tab/index" ng-click="leaveHere()">
+          <i class="icon ion-android-boat">&nbsp;乘船离开</i>
+        </a>
+        <div class="h1 title login-title" id="ch-login-title-home">我的小窝</div>
+        <!--<a class="select-item" ng-class="{activities : type == 'discovery'}" ng-click="changeType(0)" style="border-radius: 28px 0 0 28px;right: 50%;">-->
+            <!--小窝-->
+        <!--</a>-->
+        <!--<a class="select-item" ng-class="{activities : type == 'location'}" ng-click="changeType(1)" style="border-radius: 0 28px 28px 0px;left: 50%;">-->
+            <!--附近-->
+        <!--</a>-->
+        <a class="icon ion-ios-search-strong ch-search" href="#/tab/search"></a>
+    </div>
+</ion-header-bar>
+<ion-view cache-view="false">
+    <ion-content has-bouncing="true" overflow-scroll="false">
+        <ion-refresher on-refresh="doRefresh()" pulling-text="下拉刷新" refreshing-text="正在刷新" refreshing-icon="ion-loading-b"></ion-refresher>
+        <div class="content ch-content">
+          <div>
+            <div class="list card">
+              <div class="list">
+                <a class="item item-thumbnail-left" href="#/tab/groupmsg" ng-click="comment1()">
+                  <img src="img/pic1.jpg">
+                  <h2>暖和暖和的一天</h2>
+                  <p>
+                    猫咪温柔地蹭着脸颊暖和暖和的一天暖
+                  </p>
+                  <p>
+                    嗅了嗅正在发芽的小茉莉露出圆鼓鼓的肚子
+                  </p>
+                </a>
+              </div>
+              <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="javascript:;" ng-click="likeBox()">
+                  <i class="icon ion-thumbsup"></i>点赞(<span id="likeNum">0</span>)
+                </a>
+                <a class="tab-item ch-tab-item-hasBage" href="#/tab/groupmsg" ng-click="comment1()">
+                  <span class="badge" id="badge1">6</span>
+                  <i class="icon ion-chatbox"></i>评论(3)
+                </a>
+                <a class="tab-item" href="#/tab/giveup" ng-click="badBox1()">
+                  <i class="icon ion-sad"></i>不喜欢(<span id="badNum1">0</span>)
+                </a>
+              </div>
+            </div>
+            <div class="list card">
+              <div class="list">
+                <a class="item item-thumbnail-left" href="#/tab/groupmsg" ng-click="comment2()">
+                  <img src="img/perry.png">
+                  <h2>涂鸦小组召集</h2>
+                  <p>
+                    啦啦啦~
+                  </p>
+                  <p>
+                    背上我们的小画板涂鸦啦~
+                  </p>
+                </a>
+              </div>
+              <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="javascript:;" ng-click="likeBox1()">
+                  <i class="icon ion-thumbsup"></i>点赞(<span id="likeNum1">0</span>)
+                </a>
+                <a class="tab-item ch-tab-item-hasBage" href="#/tab/groupmsg" ng-click="comment2()">
+                  <span class="badge" id="badge2">3</span>
+                  <i class="icon ion-chatbox"></i>评论(3)
+                </a>
+                <a class="tab-item" href="#/tab/giveup" ng-click="badBox2()">
+                  <i class="icon ion-sad"></i>不喜欢(<span id="badNum2">0</span>)
+                </a>
+              </div>
+            </div>
+            <div class="list card">
+              <div class="list">
+                <a class="item item-thumbnail-left" href="#/tab/friendDetail" ng-click="comment3()">
+                  <img src="img/1.jpg">
+                  <h2>密室盗墓</h2>
+                  <p>
+                    昏暗的走道,两边都是紧闭的玻璃大门,透过玻璃的是里面渗出来的丝丝寒意
+                  </p>
+                  <p>
+                    "哒哒哒"的脚步声……黑黢黢的洞口……
+                  </p>
+                  <!--<h2>你好,梵高先生</h2>-->
+                  <!--<p>-->
+                    <!--🌲我挑了几张图问老师哪个最简单噢,心想:"矮油,这回可以舒服拉,都是简单的。"-->
+                  <!--</p>-->
+                  <!--<p>-->
+                    <!--老师瞄了几眼:"有点追求,这次你就画《星空》吧。"-->
+                  <!--</p>-->
+                  <!--<p>-->
+                    <!--画了第一遍,说颜色错拉,重新来,再画第二遍,又说太跳跃来,不够沉稳,重新来……-->
+                  <!--</p>-->
+                </a>
+              </div>
+              <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="javascript:;" ng-click="likeBox2()">
+                  <i class="icon ion-thumbsup"></i>点赞(<span id="likeNum2">0</span>)
+                </a>
+                <a class="tab-item ch-tab-item-hasBage" href="#/tab/friendDetail" ng-click="comment3()">
+                  <span class="badge" id="badge3">2</span>
+                  <i class="icon ion-chatbox"></i>评论(3)
+                </a>
+                <a class="tab-item" href="#/tab/giveup" ng-click="badBox3()">
+                  <i class="icon ion-sad"></i>不喜欢(<span id="badNum3">0</span>)
+                </a>
+              </div>
+            </div>
+          </div>
+            <!-- 小窝页面-->
+            <!--<div ng-if="type == 'discovery'">-->
+                <!--<div class="list card">-->
+                  <!--<div class="list">-->
+                    <!--<a class="item item-thumbnail-left" href="#/tab/groupmsg">-->
+                      <!--<img src="img/pic1.jpg">-->
+                      <!--<h2>暖和暖和的一天</h2>-->
+                      <!--<p>-->
+                        <!--猫咪温柔地蹭着脸颊暖和暖和的一天暖-->
+                      <!--</p>-->
+                      <!--<p>-->
+                        <!--嗅了嗅正在发芽对小茉莉露出圆鼓鼓的肚子-->
+                      <!--</p>-->
+                    <!--</a>-->
+                  <!--</div>-->
+                  <!--<div class="item tabs tabs-secondary tabs-icon-left">-->
+                        <!--<a class="tab-item" href="javascript:;">-->
+                            <!--<i class="icon ion-thumbsup"></i>点赞(5)-->
+                        <!--</a>-->
+                        <!--<a class="tab-item ch-tab-item-hasBage" href="#/tab/groupmsg">-->
+                            <!--<span class="badge">6</span>-->
+                            <!--<i class="icon ion-chatbox"></i>评论(3)-->
+                        <!--</a>-->
+                        <!--<a class="tab-item" href="#/tab/giveup">-->
+                            <!--<i class="icon ion-sad"></i>不喜欢(1)-->
+                        <!--</a>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="list card">-->
+                  <!--<div class="list">-->
+                    <!--<a class="item item-thumbnail-left" href="#/tab/groupmsg">-->
+                      <!--<img src="img/pic1.jpg">-->
+                      <!--<h2>暖和暖和的一天</h2>-->
+                      <!--<p>-->
+                        <!--猫咪温柔地蹭着脸颊暖和暖和的一天暖-->
+                      <!--</p>-->
+                      <!--<p>-->
+                        <!--嗅了嗅正在发芽对小茉莉露出圆鼓鼓的肚子-->
+                      <!--</p>-->
+                    <!--</a>-->
+                  <!--</div>-->
+                  <!--<div class="item tabs tabs-secondary tabs-icon-left">-->
+                    <!--<a class="tab-item" href="javascript:;">-->
+                      <!--<i class="icon ion-thumbsup"></i>点赞(5)-->
+                    <!--</a>-->
+                    <!--<a class="tab-item ch-tab-item-hasBage" href="#/tab/groupmsg">-->
+                      <!--<span class="badge">6</span>-->
+                      <!--<i class="icon ion-chatbox"></i>评论(3)-->
+                    <!--</a>-->
+                    <!--<a class="tab-item" href="#/tab/giveup">-->
+                      <!--<i class="icon ion-sad"></i>不喜欢(1)-->
+                    <!--</a>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="list card">-->
+                  <!--<div class="list">-->
+                    <!--<a class="item item-thumbnail-left" href="#/tab/groupmsg">-->
+                      <!--<img src="img/pic1.jpg">-->
+                      <!--<h2>暖和暖和的一天</h2>-->
+                      <!--<p>-->
+                        <!--猫咪温柔地蹭着脸颊暖和暖和的一天暖-->
+                      <!--</p>-->
+                      <!--<p>-->
+                        <!--嗅了嗅正在发芽对小茉莉露出圆鼓鼓的肚子-->
+                      <!--</p>-->
+                    <!--</a>-->
+                  <!--</div>-->
+                  <!--<div class="item tabs tabs-secondary tabs-icon-left">-->
+                    <!--<a class="tab-item" href="javascript:;">-->
+                      <!--<i class="icon ion-thumbsup"></i>点赞(5)-->
+                    <!--</a>-->
+                    <!--<a class="tab-item ch-tab-item-hasBage" href="#/tab/groupmsg">-->
+                      <!--<span class="badge">6</span>-->
+                      <!--<i class="icon ion-chatbox"></i>评论(3)-->
+                    <!--</a>-->
+                    <!--<a class="tab-item" href="#/tab/giveup">-->
+                      <!--<i class="icon ion-sad"></i>不喜欢(1)-->
+                    <!--</a>-->
+                  <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <!-- 附近页面-->
+            <!--<div ng-if="type == 'location'" style="z-index: 5;">-->
+                <!--<div class="row ch-row">-->
+                    <!--<div class="col tabs-striped">-->
+                        <!--<div class="col-demo main-select" ng-class="{activity : act == 'activity'}" ng-click="changeAct(0)">晏几道</div>-->
+                    <!--</div>-->
+                    <!--<div class="col">-->
+                        <!--<div class="col-demo main-select" ng-class="{activity : act == 'personal'}" ng-click="changeAct(1)">不正常人类研究小组</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;<div class="col">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="col-demo main-select" ng-class="{activity : act == 'group'}" ng-click="changeAct(2)">群</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--</div>-->
+
+                <!--&lt;!&ndash; 活动列表&ndash;&gt;-->
+                <!--<div ng-if="act == 'activity'">-->
+                    <!--<div class="backgound-default group-list">-->
+                        <!--<a href="#/tab/actMsg">-->
+                            <!--<img class="img-default group-img" src="img/pic4.jpg">-->
+                            <!--<span class="group-title dm-nowrap-1">猴面包树画画 周末上课</span>-->
+                            <!--<span class="group-position dm-nowrap-1">徐汇区</span>-->
+                            <!--<span class="group-distance"><1000米</span>-->
+                            <!--<span class="group-member">组员：2</span>-->
+                            <!--<span class="group-fun">粉丝：5</span>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                    <!--<div class="backgound-default group-list">-->
+                      <!--<a href="#/tab/actMsg">-->
+                        <!--<img class="img-default group-img" src="img/pic5.jpg">-->
+                        <!--<span class="group-title dm-nowrap-1">猴面包树画画 周末上课</span>-->
+                        <!--<span class="group-position dm-nowrap-1">徐汇区</span>-->
+                        <!--<span class="group-distance"><1000米</span>-->
+                        <!--<span class="group-member">组员：2</span>-->
+                        <!--<span class="group-fun">粉丝：5</span>-->
+                      <!--</a>-->
+                    <!--</div>-->
+                  <!--<div class="backgound-default group-list">-->
+                    <!--<a href="#/tab/actMsg">-->
+                      <!--<img class="img-default group-img" src="img/pic4.jpg">-->
+                      <!--<span class="group-title dm-nowrap-1">猴面包树画画 周末上课</span>-->
+                      <!--<span class="group-position dm-nowrap-1">徐汇区</span>-->
+                      <!--<span class="group-distance"><1000米</span>-->
+                      <!--<span class="group-member">组员：2</span>-->
+                      <!--<span class="group-fun">粉丝：5</span>-->
+                    <!--</a>-->
+                  <!--</div>-->
+                  <!--<div class="backgound-default group-list">-->
+                    <!--<a href="#/tab/actMsg">-->
+                      <!--<img class="img-default group-img" src="img/pic5.jpg">-->
+                      <!--<span class="group-title dm-nowrap-1">猴面包树画画 周末上课</span>-->
+                      <!--<span class="group-position dm-nowrap-1">徐汇区</span>-->
+                      <!--<span class="group-distance"><1000米</span>-->
+                      <!--<span class="group-member">组员：2</span>-->
+                      <!--<span class="group-fun">粉丝：5</span>-->
+                    <!--</a>-->
+                  <!--</div>-->
+                  <!--<div class="backgound-default group-list">-->
+                    <!--<a href="#/tab/actMsg">-->
+                      <!--<img class="img-default group-img" src="img/pic4.jpg">-->
+                      <!--<span class="group-title dm-nowrap-1">猴面包树画画 周末上课</span>-->
+                      <!--<span class="group-position dm-nowrap-1">徐汇区</span>-->
+                      <!--<span class="group-distance"><1000米</span>-->
+                      <!--<span class="group-member">组员：2</span>-->
+                      <!--<span class="group-fun">粉丝：5</span>-->
+                    <!--</a>-->
+                  <!--</div>-->
+                  <!--<div class="backgound-default group-list">-->
+                    <!--<a href="#/tab/actMsg">-->
+                      <!--<img class="img-default group-img" src="img/pic5.jpg">-->
+                      <!--<span class="group-title dm-nowrap-1">猴面包树画画 周末上课</span>-->
+                      <!--<span class="group-position dm-nowrap-1">徐汇区</span>-->
+                      <!--<span class="group-distance"><1000米</span>-->
+                      <!--<span class="group-member">组员：2</span>-->
+                      <!--<span class="group-fun">粉丝：5</span>-->
+                    <!--</a>-->
+                  <!--</div>-->
+                <!--</div>-->
+
+                <!--&lt;!&ndash; 个人列表&ndash;&gt;-->
+                <!--<div ng-if="act == 'personal'">-->
+                  <!--<ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/friendDetail">-->
+                    <!--<img ng-src="img/pic2.jpg">-->
+                    <!--<h2>阿波罗</h2>-->
+                    <!--<p>关注：6</p>-->
+                    <!--<ion-option-button class="button-assertive" ng-click="remove(chat)">-->
+                      <!--删除-->
+                    <!--</ion-option-button>-->
+                  <!--</ion-item>-->
+                  <!--<ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/friendDetail">-->
+                    <!--<img ng-src="img/pic2.jpg">-->
+                    <!--<h2>阿波罗</h2>-->
+                    <!--<p>关注：6</p>-->
+                    <!--<ion-option-button class="button-assertive" ng-click="remove(chat)">-->
+                      <!--删除-->
+                    <!--</ion-option-button>-->
+                  <!--</ion-item>-->
+                  <!--<ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/friendDetail">-->
+                    <!--<img ng-src="img/pic2.jpg">-->
+                    <!--<h2>阿波罗</h2>-->
+                    <!--<p>关注：6</p>-->
+                    <!--<ion-option-button class="button-assertive" ng-click="remove(chat)">-->
+                      <!--删除-->
+                    <!--</ion-option-button>-->
+                  <!--</ion-item>-->
+                <!--</div>-->
+
+
+                <!--&lt;!&ndash; 群列表&ndash;&gt;-->
+                <!--&lt;!&ndash;<div ng-if="act == 'group'">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="backgound-default group-list">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<img class="img-default group-img" src="img/max.png">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="group-title dm-nowrap-1">少年足球队</span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="group-distance">>400米</span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="group-member">组员：200</span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="group-fun">粉丝：300</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--</div>-->
+
+        </div>
+
+    </ion-content>
+</ion-view>

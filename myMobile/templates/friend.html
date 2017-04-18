@@ -1,0 +1,88 @@
+<ion-header-bar align-title="center" class="bar-stable">
+    <div class="h1 title login-title">晏几道</div>
+    <div class="buttons">
+      <a class="button login-register" ng-show="type=='focus'" ng-click="leaveHere()">
+        <i class="icon ion-paper-airplane"></i>
+      </a>
+    </div>
+</ion-header-bar>
+<ion-view cache-view="false">
+    <ion-content has-bouncing="true" overflow-scroll="false">
+        <div class="row" style="border-bottom: 1px solid lightgray;">
+            <div class="col tabs-striped">
+                <div class="col-demo main-select" ng-class="{activity : type == 'friend'}" ng-click="changeType(0)">我的推荐</div>
+            </div>
+            <!--<div class="col">-->
+                <!--<div class="col-demo main-select" ng-class="{activity : type == 'group'}" ng-click="changeType(1)">项目经验</div>-->
+            <!--</div>-->
+            <div class="col">
+                <div class="col-demo main-select" ng-class="{activity : type == 'focus'}" ng-click="changeType(2)">我的WEB</div>
+            </div>
+        </div>
+
+        <!-- 类型列表-->
+        <ion-list>
+            <!-- 我的推荐-->
+            <div ng-if="type == 'friend'">
+              <ion-list>
+                <ion-item class="item-remove-animate item-avatar item-icon-right ch-item-avatar-h2" type="item-text-wrap" ng-click="dot()">
+                  <i class="icon ion-map ch-ion-map"></i>
+                  <h2>有趣的小店</h2>
+                  <i class="icon ion-chevron-right icon-accessory"></i>
+                  <ion-option-button class="button-assertive" ng-click="remove(chat)">
+                    删除
+                  </ion-option-button>
+                </ion-item>
+                <ion-item class="item-remove-animate item-avatar item-icon-right ch-item-avatar-h2" type="item-text-wrap" ng-click="dot()">
+                  <i class="icon ion-icecream ch-ion-map"></i>
+                  <h2>好吃的零食</h2>
+                  <i class="icon ion-chevron-right icon-accessory"></i>
+                  <ion-option-button class="button-assertive" ng-click="remove(chat)">
+                    删除
+                  </ion-option-button>
+                </ion-item>
+                <ion-item class="item-remove-animate item-avatar item-icon-right ch-item-avatar-h2" type="item-text-wrap" ng-click="dot()">
+                  <i class="icon ion-pizza ch-ion-map"></i>
+                  <h2>小伙伴推荐</h2>
+                  <i class="icon ion-chevron-right icon-accessory"></i>
+                  <ion-option-button class="button-assertive" ng-click="remove(chat)">
+                    删除
+                  </ion-option-button>
+                </ion-item>
+                <ion-item class="item-remove-animate item-avatar item-icon-right ch-item-avatar-h2" type="item-text-wrap" ng-click="dot()">
+                  <i class="icon ion-wand ch-ion-map"></i>
+                  <h2>小物件</h2>
+                  <i class="icon ion-chevron-right icon-accessory"></i>
+                  <ion-option-button class="button-assertive" ng-click="remove(chat)">
+                    删除
+                  </ion-option-button>
+                </ion-item>
+              </ion-list>
+            </div>
+
+            <!-- 关注的框架-->
+            <div ng-if="type == 'focus'">
+                <ion-item class="item-remove-animate item-avatar item-icon-right ch-icon-js" type="item-text-wrap" href="javascript:;">
+                    <img ng-src="img/js.png">
+                    <h2>JAVASCRIPT</h2>
+                    <p>原生JS</p>
+                </ion-item>
+                <ion-item class="item-remove-animate item-avatar item-icon-right ch-icon-js" type="item-text-wrap" href="javascript:;">
+                  <img ng-src="img/angularjs2.png">
+                  <h2>ANGULAR</h2>
+                  <p>原生JS</p>
+                </ion-item>
+                <ion-item class="item-remove-animate item-avatar item-icon-right ch-icon-js" type="item-text-wrap" href="javascript:;">
+                  <img ng-src="img/react.png">
+                  <h2>REACT</h2>
+                  <p>原生JS</p>
+                </ion-item>
+                <ion-item class="item-remove-animate item-avatar item-icon-right ch-icon-js" type="item-text-wrap" href="javascript:;">
+                  <img ng-src="img/vue.png">
+                  <h2>VUE</h2>
+                  <p>原生JS</p>
+                </ion-item>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>
